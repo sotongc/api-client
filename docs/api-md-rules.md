@@ -26,9 +26,10 @@
 
 - query : ?a=1&b=2&c=hello&d=world
 - header :
-	% content-type : application/json
-	% authroization : abd9912f
-- body : ```json
+	- content-type : application/json
+	- authroization : abd9912f
+- body : 
+```json
 {
 	"list":[
 		{
@@ -43,7 +44,8 @@
 {res}:
 
 - content-type: application/json
-- sample: ```json
+- sample: 
+```json
 {
 	"status":200,
 	"message":"success",
@@ -53,7 +55,8 @@
 	}
 }
 ```
-- errors: ```json
+- errors: 
+```json
 [
 	{
 		"code":415,
