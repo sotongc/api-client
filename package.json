@@ -1,40 +1,51 @@
 {
-  "name": "api-client",
+  "name": "cps-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "cps web",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=production webpack --config ./conf/webpack.test.config.js --progress -p && cp ./views/preview.html ./dist/views/",
+    "start": "NODE_ENV=development webpack-dev-server --config ./conf/webpack.dev.config.js --host localhost",
+    "build": "NODE_ENV=production webpack --config ./conf/webpack.pro.config.js --progress -p && cp ./views/preview.html ./dist/views/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sotongc/api-client.git"
+    "url": "git@git.op-mobile.opera.com:socialdata/opera-news-cps.git"
   },
   "keywords": [
-    "api",
-    "client"
+    "web"
   ],
   "author": "Guo Chen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sotongc/api-client/issues"
-  },
-  "homepage": "https://github.com/sotongc/api-client#readme",
-  "dependencies": {
-    "vue": "^2.4.2",
-    "vuex": "^2.4.0"
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-runtime": "^6.26.0",
+    "babili-webpack-plugin": "^0.1.2",
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
+    "optimize-css-assets-webpack-plugin": "^3.1.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "vue-loader": "^13.0.4",
-    "webpack": "^3.5.5"
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.5.6",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "js-md5": "^0.6.0",
+    "vue": "^2.4.2",
+    "vue-quill-editor": "^2.3.2",
+    "vue-router": "^2.7.0",
+    "vue2-editor": "^2.0.26",
+    "vuex": "^2.4.0"
   }
 }

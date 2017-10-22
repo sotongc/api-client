@@ -22,7 +22,7 @@ var config={
 		timeout:'./src/js/timeout/index.js',
 	},
 	output:{
-		path:path.resolve(__dirname,'../dist'),
+		path:path.resolve(__dirname,'../test_server_build'),
 		publicPath:'../',
 		filename:'js/[name].bundle.js?[hash]'
 	},
@@ -74,7 +74,7 @@ var config={
 					name:'[name].[ext]',
 					limit:50000,
 					publicPath:"font/",
-					outputPath:path.resolve(__dirname,"../dist/")
+					outputPath:path.resolve(__dirname,"../test_server_build/")
 				}
 			}
 		]
@@ -93,7 +93,7 @@ var config={
 	plugins:[
 		new webpack.DefinePlugin({
 			'process.env':{
-				NODE_ENV:JSON.stringify('production')
+				NODE_ENV:JSON.stringify('test')
 			}
 		}),
 		new ExtractTextPlugin({
@@ -131,4 +131,3 @@ tpl.forEach(function(chunk){
 });
 
 module.exports=config;
-
