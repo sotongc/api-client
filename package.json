@@ -4,13 +4,12 @@
   "description": "cps web",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=production webpack --config ./conf/webpack.test.config.js --progress -p && cp ./views/preview.html ./dist/views/",
     "start": "NODE_ENV=development webpack-dev-server --config ./conf/webpack.dev.config.js --host localhost",
     "build": "NODE_ENV=production webpack --config ./conf/webpack.pro.config.js --progress -p && cp ./views/preview.html ./dist/views/"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.op-mobile.opera.com:socialdata/opera-news-cps.git"
+    "url": "git@github.com:sotongc/api-client.git"
   },
   "keywords": [
     "web"
@@ -43,9 +42,7 @@
   "dependencies": {
     "js-md5": "^0.6.0",
     "vue": "^2.4.2",
-    "vue-quill-editor": "^2.3.2",
     "vue-router": "^2.7.0",
-    "vue2-editor": "^2.0.26",
     "vuex": "^2.4.0"
   }
 }
