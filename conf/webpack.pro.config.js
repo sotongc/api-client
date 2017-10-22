@@ -10,16 +10,11 @@ var HtmlWebpackPlugin=require('html-webpack-plugin');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 //entries
-var tpl=['confirm','edit','login','profile','register','timeout'];
+var tpl=['app'];
 
 var config={
 	entry:{
-		login:'./src/js/login/index.js',
-		register:'./src/js/register/index.js',
-		profile:'./src/js/profile/index.js',
-		edit:'./src/js/edit/index.js',
-		confirm:'./src/js/confirm/index.js',
-		timeout:'./src/js/timeout/index.js',
+		app:'./src/js/app.js'
 	},
 	output:{
 		path:path.resolve(__dirname,'../dist'),

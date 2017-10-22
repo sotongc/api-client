@@ -3,12 +3,7 @@ var webpack=require('webpack');
 
 module.exports={
 	entry:{
-		login:'./src/js/login/index.js',
-		register:'./src/js/register/index.js',
-		profile:'./src/js/profile/index.js',
-		edit:'./src/js/edit/index.js',
-		confirm:'./src/js/confirm/index.js',
-		timeout:'./src/js/timeout/index.js'
+		app:'./src/js/app.js'
 	},
 	output:{
 		path:path.resolve(__dirname,"../dist"),
