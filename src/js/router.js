@@ -9,6 +9,6 @@ const routes=[
 
 ];
 
-export default new VueRouter({
+export default new Router({
 	routes:routes
 });
